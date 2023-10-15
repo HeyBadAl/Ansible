@@ -1,0 +1,8 @@
+- name: Install Python
+  become: yes
+  apt:
+    name: python3
+    state: present
+  tags:
+    - python
+
