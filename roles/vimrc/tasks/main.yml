@@ -1,0 +1,16 @@
+- name: Clone .vimrc repository
+  git:
+    repo: https://github.com/HeyBadAl/VimRC.git
+    dest: ~/dotvimrc
+  tags:
+    - vimrc
+
+- name: Update .vimrc
+  copy:
+    src: ~/dotvimrc/.vimrc
+    dest: ~/.vimrc
+    owner: badal
+    group: badal
+  tags:
+    - vimrc
+

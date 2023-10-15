@@ -12,4 +12,6 @@
     - docker
     - awscli
     - python
+    - vimrc
+
 
