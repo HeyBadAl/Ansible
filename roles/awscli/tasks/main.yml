@@ -1,0 +1,10 @@
+- name: Install AWS CLI
+  become: yes
+  command: pip install awscli
+  environment:
+    PATH: "/usr/local/bin:/usr/bin:/bin"
+  args:
+    creates: /usr/local/bin/aws
+  tags:
+    - awscli
+
