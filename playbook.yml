@@ -1,12 +1,14 @@
----
 - name: Install and Configure Zsh with Oh-My-Zsh
   hosts: localhost
   become: yes
 
   roles:
+    - system-update
     - zsh
     - ohmyzsh
     - autosuggestions
     - syntaxhighlighting
     - go
     - docker
+    - awscli
+
