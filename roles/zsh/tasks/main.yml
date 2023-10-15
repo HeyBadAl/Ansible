@@ -1,0 +1,13 @@
+- name: Install Zsh
+  apt:
+    name: zsh
+    state: present
+  tags: 
+    - zsh_setup
+      
+- name: Set Zsh as the default shell
+  user:
+    name: badal
+    shell: /bin/zsh
+  tags: 
+    - zsh_setup

@@ -1,0 +1,6 @@
+- name: Install Zsh Auto-Suggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    update: yes
+

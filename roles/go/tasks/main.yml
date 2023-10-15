@@ -1,0 +1,8 @@
+- name: Install Go
+  become: yes
+  apt:
+    name: golang
+    state: present
+  tags:
+    - go
+
