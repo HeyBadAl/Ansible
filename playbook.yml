@@ -13,5 +13,4 @@
     - awscli
     - python
     - vimrc
-
-
+    - tmux
