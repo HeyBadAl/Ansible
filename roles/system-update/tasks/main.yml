@@ -1,0 +1,15 @@
+- name: Update package repositories
+  become: yes
+  apt:
+    update_cache: yes
+  tags:
+    - system-update
+
+- name: Upgrade packages
+  become: yes
+  apt:
+    upgrade: dist
+    autoremove: yes
+    autoclean: yes
+  tags:
+    - system-update
