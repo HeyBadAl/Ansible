@@ -1,0 +1,22 @@
+- name: Download Terraform
+  get_url:
+    url: "https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip"  
+    dest: /tmp/terraform.zip
+  tags:
+    - terraform
+
+- name: Unzip Terraform
+  unarchive:
+    src: /tmp/terraform.zip
+    dest: /usr/local/bin/
+    remote_src: yes
+  tags:
+    - terraform
+
+- name: Make Terraform executable
+  file:
+    path: /usr/local/bin/terraform
+    mode: '0755'
+  tags:
+    - terraform
+
